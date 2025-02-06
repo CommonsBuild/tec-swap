@@ -1,0 +1,42 @@
+{
+  "collateralToken": {
+    "address": "0x9bcef72be871e61ed4fbbc7630889bee758eb81d",
+    "abi": [
+      "function balanceOf(address _owner) public view returns (uint256 balance)",
+      "function symbol() public view returns (string memory)",
+      "function decimals() public view returns (uint8)",
+      "function approve(address _spender, uint256 _amount) public returns (bool success)",
+      "function totalSupply() public view returns (uint256)"
+    ]
+  },
+  "tecToken": {
+    "address": "0x8Fc7C1109c08904160d6AE36482B79814D45eB78",
+    "abi": [
+      "function balanceOf(address _owner) public view returns (uint256 balance)",
+      "function symbol() public view returns (string memory)",
+      "function decimals() public view returns (uint8)",
+      "function totalSupply() public view returns (uint256)"
+    ]
+  },
+  "bondingCurve": {
+    "address": "0xe5c04ee3f2ea5deb62ee9c3c2fcd63c06c80b77f",
+    "abi": [
+      "function buyFeePct() public view returns (uint256 fee)",
+      "function sellFeePct() public view returns (uint256 fee)",
+      "function makeBuyOrder(address _onBehalfOf, address _collateral, uint256 _depositAmount, uint256 _minReturnAmountAfterFee)",
+      "function makeSellOrder(address _onBehalfOf, address _collateral, uint256 _sellAmount, uint256 _minReturnAmountAfterFee)",
+      "function getCollateralToken(address _reserveToken) external view returns (bool whitelisted, uint256 virtualSupply, uint256 virtualBalance, uint32 reserveRatio)"
+    ]
+  },
+  "formula": {
+    "address": "0x29c7E9fFF64bDe42FAa6E8C0567A15290F7D948B",
+    "abi": [
+      "function calculatePurchaseReturn(uint256 _supply, uint256 _connectorBalance, uint32 _connectorWeight, uint256 _depositAmount) public view returns (uint256)",
+      "function calculateSaleReturn(uint256 _supply, uint256 _connectorBalance, uint32 _connectorWeight, uint256 _sellAmount) public view returns (uint256)"
+    ]
+  },
+  "reserve": {
+    "address": "0xae34eb7c3163aAD32142fbBCf15EC234c9EF173f",
+    "abi": ["function balance() public view returns (uint256 balance)"]
+  }
+}
