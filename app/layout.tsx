@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import { Bai_Jamjuree, Chakra_Petch, Inter } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -56,7 +58,11 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${bayJamjuree.variable} ${chackra.variable} antialiased`}
       >
-        <Providers>{children}</Providers>
+        <Providers>
+          {children}
+          <SpeedInsights />
+          <Analytics />
+        </Providers>
         <Toaster />
       </body>
     </html>
