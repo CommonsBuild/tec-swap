@@ -3,8 +3,8 @@ import { http } from "viem";
 import { optimism } from "viem/chains";
 
 export const wagmiConfig = getDefaultConfig({
-  appName: "My RainbowKit App",
-  projectId: "YOUR_PROJECT_ID",
+  appName: "TEC Swap",
+  projectId: process.env.NEXT_PUBLIC_REOWN_PROJECT_ID!,
   chains: [optimism],
   transports: {
     [optimism.id]: http(
